@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Engenharia de Prompt - Fundamentos</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Reveal.js CSS -->
+  <link rel="stylesheet" href="./node_modules/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="./node_modules/reveal.js/dist/theme/black.css">
+
+  <style>
+    h2 { color: #00e5ff; }
+    p { font-size: 1.1em; }
+    code { color: #00ff99; }
+  </style>
+</head>
+
+<body>
+
+<div class="reveal">
+  <div class="slides">
+
+    <section>
+      <h2>Engenharia de Prompt</h2>
+      <p>Fundamentos</p>
+      <small>IA Generativa & LLMs</small>
+    </section>
+
+    <section>
+      <h2>O que é um Prompt?</h2>
+      <p>Um prompt é a <strong>instrução</strong> dada a um modelo de IA generativa.</p>
+      <p>A qualidade da resposta depende da clareza do pedido.</p>
+    </section>
+
+    <section>
+      <h2>Por que Prompt Engineering é importante?</h2>
+      <ul>
+        <li>IA não entende intenção humana</li>
+        <li>Responde apenas ao texto recebido</li>
+        <li>Prompt mal feito → resposta genérica</li>
+      </ul>
+      <p><em>"Prompt engineering é comunicação eficiente com a IA"</em></p>
+    </section>
+
+    <section>
+      <h2>Elementos de um Bom Prompt</h2>
+      <ul>
+        <li>Contexto</li>
+        <li>Papel (role)</li>
+        <li>Objetivo</li>
+        <li>Formato da resposta</li>
+        <li>Restrições</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Exemplo Simples vs Estruturado</h2>
+      <p><strong>Prompt fraco:</strong></p>
+      <code>Explique IA generativa</code>
+
+      <p><strong>Prompt estruturado:</strong></p>
+      <code>
+        Você é um professor do ensino médio.<br>
+        Explique IA generativa com exemplos simples,<br>
+        em até 5 parágrafos.
+      </code>
+    </section>
+
+    <section>
+      <h2>Técnica 1: Role Prompting</h2>
+      <code>Você é um professor de química.</code>
+      <p>Define linguagem e profundidade da resposta.</p>
+    </section>
+
+    <section>
+      <h2>Técnica 2: Restrições Claras</h2>
+      <code>
+        Explique em até 3 parágrafos,<br>
+        sem termos técnicos.
+      </code>
+    </section>
+
+    <section>
+      <h2>Técnica 3: Exemplos no Prompt</h2>
+      <p><strong>Few-shot Prompting</strong></p>
+      <code>
+        Pergunta: O que é IA?<br>
+        Resposta: IA é...<br><br>
+        Agora explique IA generativa.
+      </code>
+    </section>
+
+    <section>
+      <h2>Limitações</h2>
+      <ul>
+        <li>Pode errar</li>
+        <li>Pode inventar respostas</li>
+        <li>Não valida fontes</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>O Papel do Professor</h2>
+      <p>IA como ferramenta pedagógica.</p>
+      <p>Professor como mediador do conhecimento.</p>
+    </section>
+
+    <section>
+      <h2>Encerramento</h2>
+      <p><strong>"Quem sabe perguntar bem, aprende melhor."</strong></p>
+    </section>
+
+  </div>
+</div>
+
+<!-- Reveal.js JS -->
+<script src="./node_modules/reveal.js/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    transition: 'slide',
+    slideNumber: true,
+    controls: true,
+    progress: true
+  });
+</script>
+
+</body>
+</html>
