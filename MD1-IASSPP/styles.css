@@ -1,0 +1,26 @@
+:root {
+      --royal-blue: #0b3c8c;
+    }
+
+    body { background: #ffffff; }
+
+    .reveal h1, .reveal h2, .reveal h3 {
+      color: var(--royal-blue);
+    }
+
+    .reveal p, .reveal li {
+      color: #000000;
+      font-size: 0.9em;
+    }
+
+    .highlight {
+      color: var(--royal-blue);
+      font-weight: bold;
+    }
+
+    .box {
+      border-left: 6px solid var(--royal-blue);
+      padding: 12px 16px;
+      margin-top: 20px;
+      background: #f4f7fb;
+    }
