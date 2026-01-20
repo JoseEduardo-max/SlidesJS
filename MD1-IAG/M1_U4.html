@@ -1,50 +1,240 @@
 <!doctype html>
-<html lang='pt-BR'>
+<html lang="pt-BR">
 
 <head>
-    <meta charset='utf-8'>
-    <title>U4 – Boas Práticas de Prompt</title>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css'>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css'>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>U4 – Boas Práticas de Engenharia de Prompt</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
+
+    <style>
+        .box {
+            background: #f4f4f4;
+            border-left: 6px solid #4f46e5;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .good {
+            border-left-color: #16a34a;
+        }
+
+        .bad {
+            border-left-color: #dc2626;
+        }
+
+        .warn {
+            border-left-color: #f59e0b;
+        }
+    </style>
 </head>
 
 <body>
-    <div class='reveal'>
-        <div class='slides'>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- CAPA -->
             <section>
                 <h1>U4</h1>
                 <h3>Boas Práticas de Engenharia de Prompt</h3>
+                <p>IA Generativa aplicada à Programação</p>
                 <p>Duração: 4h</p>
             </section>
+
+            <!-- OBJETIVO -->
             <section>
-                <h2>Boas práticas</h2>
+                <h2>Objetivo da Unidade</h2>
                 <ul>
-                    <li>Ser claro</li>
-                    <li>Definir formato</li>
+                    <li>Aprender a estruturar prompts eficientes</li>
+                    <li>Evitar erros comuns</li>
+                    <li>Refinar respostas da IA</li>
+                    <li>Usar IA de forma profissional</li>
+                </ul>
+            </section>
+
+            <!-- BOAS PRÁTICAS -->
+            <section>
+                <h2>Boas Práticas Fundamentais</h2>
+                <ul>
+                    <li>Ser claro e direto</li>
+                    <li>Definir objetivo</li>
                     <li>Dar contexto</li>
+                    <li>Definir formato da resposta</li>
+                    <li>Iterar até melhorar</li>
                 </ul>
             </section>
+
+            <!-- CONTEXTO -->
             <section>
-                <h2>Erros comuns</h2>
+                <h2>Importância do Contexto</h2>
+                <div class="box">
+                    A IA não sabe quem você é, nem o seu nível.<br>
+                    Se você não disser, ela assume.
+                </div>
+            </section>
+
+            <!-- EXEMPLO CONTEXTO -->
+            <section>
+                <h2>Exemplo com Contexto</h2>
+                <div class="box good">
+                    "Sou iniciante em programação. Explique o que é uma API REST
+                    usando exemplos simples e linguagem acessível."
+                </div>
+            </section>
+
+            <!-- FORMATO -->
+            <section>
+                <h2>Definir Formato da Resposta</h2>
                 <ul>
-                    <li>Pedir coisas vagas</li>
-                    <li>Não revisar</li>
-                    <li>Não iterar</li>
+                    <li>Lista</li>
+                    <li>Passo a passo</li>
+                    <li>Código comentado</li>
+                    <li>Tabela</li>
                 </ul>
             </section>
+
+            <!-- EXEMPLO FORMATO -->
             <section>
-                <h2>Técnicas</h2>
-                <div class='box'>Use exemplos, papéis e refinamento de respostas.</div>
+                <h2>Exemplo com Formato</h2>
+                <div class="box good">
+                    "Explique promises em JavaScript em:
+                    <ul>
+                        <li>Definição</li>
+                        <li>Exemplo de código</li>
+                        <li>Erro comum</li>
+                    </ul>"
+                </div>
             </section>
+
+            <!-- PAPEL -->
             <section>
-                <h2>Atividade</h2>
-                <div class='box'>Refinar um prompt até obter um resultado ideal.</div>
+                <h2>Atribuir um Papel à IA</h2>
+                <div class="box">
+                    Dizer para a IA <strong>quem ela é</strong> muda a resposta.
+                </div>
             </section>
+
+            <!-- EXEMPLO PAPEL -->
+            <section>
+                <h2>Exemplo de Papel</h2>
+                <div class="box good">
+                    "Você é um desenvolvedor sênior.
+                    Revise este código e sugira melhorias seguindo boas práticas."
+                </div>
+            </section>
+
+            <!-- ERROS COMUNS -->
+            <section>
+                <h2>Erros Comuns</h2>
+                <ul>
+                    <li>Prompts vagos</li>
+                    <li>Não revisar a resposta</li>
+                    <li>Copiar código sem entender</li>
+                    <li>Confiar cegamente na IA</li>
+                </ul>
+            </section>
+
+            <!-- EXEMPLO RUIM -->
+            <section>
+                <h2>Exemplo de Prompt Ruim</h2>
+                <div class="box bad">
+                    "Faça um sistema"
+                </div>
+
+                <p>❌ Sem contexto</p>
+                <p>❌ Sem tecnologia</p>
+                <p>❌ Sem objetivo</p>
+            </section>
+
+            <!-- ITERAÇÃO -->
+            <section>
+                <h2>Iterar é Obrigatório</h2>
+                <div class="box warn">
+                    O primeiro prompt raramente é o melhor.
+                </div>
+            </section>
+
+            <!-- EXEMPLO ITERAÇÃO -->
+            <section>
+                <h2>Exemplo de Iteração</h2>
+                <div class="box">
+                    1️⃣ "Crie uma API"<br>
+                    2️⃣ "Crie uma API REST em Node.js"<br>
+                    3️⃣ "Crie uma API REST em Node.js com Express,
+                    usando MVC e comentários no código"
+                </div>
+            </section>
+
+            <!-- USO RESPONSÁVEL -->
+            <section>
+                <h2>Uso Responsável</h2>
+                <ul>
+                    <li>Validar informações</li>
+                    <li>Testar códigos</li>
+                    <li>Evitar plágio</li>
+                    <li>Manter ética profissional</li>
+                </ul>
+            </section>
+
+            <!-- ATIVIDADE 1 -->
+            <section>
+                <h2>Atividade 1 – Diagnóstico</h2>
+                <div class="box">
+                    Analise este prompt e diga o que falta:<br><br>
+                    "Explique banco de dados"
+                </div>
+            </section>
+
+            <!-- ATIVIDADE 2 -->
+            <section>
+                <h2>Atividade 2 – Refinamento</h2>
+                <div class="box">
+                    Comece com um prompt simples e refine
+                    até obter uma resposta ideal.
+                </div>
+            </section>
+
+            <!-- ATIVIDADE 3 -->
+            <section>
+                <h2>Atividade 3 – Prompt Profissional</h2>
+                <div class="box">
+                    Crie um prompt para:
+                    <ul>
+                        <li>Gerar código</li>
+                        <li>Revisar código</li>
+                        <li>Explicar um erro</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- REFLEXÃO -->
+            <section>
+                <h2>Reflexão Final</h2>
+                <div class="box">
+                    A IA erra rápido.<br>
+                    O profissional corrige melhor.
+                </div>
+            </section>
+
+            <!-- FECHAMENTO -->
+            <section>
+                <h2>Encerramento</h2>
+                <ul>
+                    <li>Prompt é habilidade</li>
+                    <li>Iteração é prática</li>
+                    <li>Responsabilidade é humana</li>
+                </ul>
+            </section>
+
         </div>
     </div>
-    <script src='https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js'></script>
-    <script>Reveal.initialize({ hash: true });</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({ hash: true });
+    </script>
 </body>
 
 </html>
