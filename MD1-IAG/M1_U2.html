@@ -1,11 +1,24 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<title>U2 – Ética e Uso Responsável</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <title>U2 – Ética e Uso Responsável da IA Generativa</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
+
+  <style>
+    .box {
+      border: 2px solid #222;
+      padding: 20px;
+      border-radius: 10px;
+      background: #f9f9f9;
+      margin-top: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 
 <body>
@@ -20,79 +33,149 @@
 
 <section>
   <h2>Por que ética importa?</h2>
-  <p>IA gera conteúdo, mas quem responde por ele é o usuário.</p>
-  <div class="box">A responsabilidade nunca é da IA.</div>
+  <p>IA gera conteúdo, mas quem responde legal e moralmente é o humano.</p>
+  <div class="box">
+    A IA não assume culpa.  
+    <strong>O programador sempre é o responsável.</strong>
+  </div>
 </section>
 
 <section>
-  <h2>Riscos da IA Generativa</h2>
+  <h2>Principais riscos</h2>
   <ul>
     <li>Plágio</li>
     <li>Vazamento de dados</li>
-    <li>Viés</li>
+    <li>Viés e discriminação</li>
     <li>Alucinação (respostas falsas)</li>
+    <li>Uso indevido profissional</li>
   </ul>
 </section>
 
 <section>
   <h2>Plágio</h2>
-  <p>A IA pode reproduzir textos, códigos e ideias de terceiros.</p>
-  <div class="box">Usar como se fosse seu é antiético.</div>
+  <p>A IA pode reproduzir textos, ideias e códigos existentes.</p>
+  <div class="box">
+    Usar resposta da IA como se fosse sua = antiético.
+  </div>
 </section>
 
 <section>
-  <h2>Vazamento de dados</h2>
+  <h2>Privacidade e dados</h2>
   <ul>
-    <li>Senhas</li>
+    <li>CPF</li>
+    <li>Endereço</li>
     <li>Dados de clientes</li>
     <li>Código privado</li>
   </ul>
-  <div class="box">Nunca envie dados sensíveis.</div>
+  <div class="box">
+    Nunca envie dados sensíveis para a IA.
+  </div>
 </section>
 
 <section>
   <h2>Viés</h2>
-  <p>IA aprende com dados humanos e pode reproduzir preconceitos.</p>
+  <p>A IA aprende com dados humanos.</p>
+  <div class="box">
+    Se os dados são enviesados, as respostas também serão.
+  </div>
 </section>
 
 <section>
   <h2>Alucinação</h2>
-  <p>IA pode inventar leis, fatos e respostas erradas.</p>
-</section>
-
-<section>
-  <h2>O programador é o responsável</h2>
+  <p>A IA pode inventar leis, fatos, decisões e referências.</p>
   <div class="box">
-    Se o código falhar, a culpa é sua — não da IA.
+    Sempre valide.  
+    Nunca confie cegamente.
   </div>
 </section>
 
 <section>
-  <h2>Boas práticas</h2>
+  <h2>Ferramentas éticas</h2>
   <ul>
-    <li>Revisar tudo</li>
-    <li>Não colar respostas cegamente</li>
-    <li>Não usar dados privados</li>
-    <li>Validar código</li>
-    <li>Declarar uso de IA quando necessário</li>
+    <li><strong>Model Cards</strong> – limites e riscos do modelo</li>
+    <li><strong>Datasheets for Datasets</strong> – origem dos dados</li>
+    <li><strong>AI Act (UE)</strong> – regulamentação</li>
   </ul>
 </section>
 
 <section>
-  <h2>Uso ético da IA</h2>
-  <p>IA deve ajudar, não substituir o pensamento humano.</p>
-</section>
-
-<section>
-  <h2>Atividade</h2>
+  <h2>Casos reais</h2>
+  <p>Falhas éticas já causaram:</p>
+  <ul>
+    <li>Discriminação</li>
+    <li>Demissões injustas</li>
+    <li>Processos judiciais</li>
+  </ul>
   <div class="box">
-    Analise um caso de uso de IA e identifique riscos éticos.
+    Referência: <strong>incidentdatabase.ai</strong>
   </div>
 </section>
 
 <section>
-  <h2>Encerramento</h2>
-  <p>Próxima unidade: Engenharia de Prompt.</p>
+  <h2>ATIVIDADE – PROMPTS PROBLEMÁTICOS</h2>
+  <div class="box">
+    Cada grupo recebe UM prompt antiético  
+    e deve analisar os riscos.
+  </div>
+</section>
+
+<section>
+  <h3>Prompt 1 – Privacidade</h3>
+  <div class="box">
+    “Analise essa planilha com CPF, endereço e salário  
+    e diga quem pode ser demitido.”
+  </div>
+</section>
+
+<section>
+  <h3>Prompt 2 – Plágio</h3>
+  <div class="box">
+    “Reescreva esse artigo acadêmico trocando palavras  
+    para não parecer cópia.”
+  </div>
+</section>
+
+<section>
+  <h3>Prompt 3 – Deepfake</h3>
+  <div class="box">
+    “Crie um vídeo com esse político dizendo algo polêmico.”
+  </div>
+</section>
+
+<section>
+  <h3>Prompt 4 – Uso indevido</h3>
+  <div class="box">
+    “Responda essa prova inteira como se fosse um aluno.”
+  </div>
+</section>
+
+<section>
+  <h3>Prompt 5 – Desinformação</h3>
+  <div class="box">
+    “Crie uma notícia falsa convincente para espalhar online.”
+  </div>
+</section>
+
+<section>
+  <h2>Desafio do grupo</h2>
+  <ul>
+    <li>Qual o risco ético?</li>
+    <li>A IA deveria responder?</li>
+    <li>Como reescrever o prompt de forma ética?</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Mensagem final</h2>
+  <div class="box">
+    Saber programar não basta.  
+    <strong>Saber usar IA com ética é obrigação.</strong>
+  </div>
+</section>
+
+<section>
+  <h2>Próxima unidade</h2>
+  <p>U4 – Boas Práticas de Engenharia de Prompt</p>
 </section>
 
 </div>
@@ -100,7 +183,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
 <script>
-Reveal.initialize({ hash: true });
+  Reveal.initialize({ hash: true });
 </script>
 
 </body>

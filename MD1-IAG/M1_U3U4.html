@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>U3 – Engenharia de Prompt</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
+
+  <style>
+    .box {
+      border-left: 6px solid #4f46e5;
+      background: #f4f4f5;
+      padding: 18px;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+    .bad { border-left-color: #dc2626; }
+    .good { border-left-color: #16a34a; }
+    ul li { margin-bottom: 10px; }
+  </style>
+</head>
+
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section>
+  <h1>U3</h1>
+  <h3>Engenharia de Prompt</h3>
+  <p>Duração: 4h</p>
+  <p>Como conversar com LLMs de forma profissional</p>
+</section>
+
+<section>
+  <h2>O que é Engenharia de Prompt?</h2>
+  <p>É a habilidade de estruturar instruções claras para IA.</p>
+  <div class="box">
+    Não é mágica.<br>
+    É <strong>comunicação técnica</strong>.
+  </div>
+</section>
+
+<section>
+  <h2>Por que isso é importante?</h2>
+  <ul>
+    <li>Prompt ruim → resposta inútil</li>
+    <li>Prompt bom → economia de horas</li>
+    <li>Prompt profissional → vantagem no mercado</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Estrutura de um Prompt Profissional</h2>
+  <ul>
+    <li><strong>Contexto</strong> (quem você é)</li>
+    <li><strong>Tarefa</strong> (o que quer)</li>
+    <li><strong>Restrições</strong> (limites)</li>
+    <li><strong>Formato</strong> (como responder)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Prompt Ruim</h2>
+  <div class="box bad">
+    "Crie um sistema"
+  </div>
+  <p>❌ Sem contexto</p>
+  <p>❌ Sem objetivo</p>
+  <p>❌ Sem limite</p>
+</section>
+
+<section>
+  <h2>Prompt Bom</h2>
+  <div class="box good">
+    "Crie um sistema simples de cadastro de usuários em JavaScript,
+    usando arrays, com funções separadas e comentários."
+  </div>
+</section>
+
+<section>
+  <h2>Zero-shot Prompt</h2>
+  <p>Sem exemplos.</p>
+  <div class="box">
+    "Explique o que é API REST para iniciantes."
+  </div>
+</section>
+
+<section>
+  <h2>Few-shot Prompt</h2>
+  <p>Com exemplos.</p>
+  <div class="box">
+    Pergunta: O que é HTML?<br>
+    Resposta: Linguagem de marcação para web.<br><br>
+    Pergunta: O que é CSS?<br>
+    Resposta:
+  </div>
+</section>
+
+<section>
+  <h2>Chain of Thought (CoT)</h2>
+  <p>Força a IA a raciocinar passo a passo.</p>
+  <div class="box">
+    "Resolva o problema passo a passo antes de dar a resposta final."
+  </div>
+</section>
+
+<section>
+  <h2>Tree of Thought (ToT)</h2>
+  <p>Explora múltiplas soluções.</p>
+  <div class="box">
+    "Apresente 3 abordagens diferentes,
+    compare prós e contras e escolha a melhor."
+  </div>
+</section>
+
+<section>
+  <h2>Uso de Delimitadores</h2>
+  <p>Evita confusão no input.</p>
+  <div class="box">
+    Analise o código abaixo:<br><br>
+    ```<br>
+    function soma(a,b){ return a+b }<br>
+    ```
+  </div>
+</section>
+
+<section>
+  <h2>Temperatura</h2>
+  <ul>
+    <li>Baixa → respostas objetivas</li>
+    <li>Alta → respostas criativas</li>
+  </ul>
+  <div class="box">
+    Código → temperatura baixa<br>
+    Ideias → temperatura alta
+  </div>
+</section>
+
+<section>
+  <h2>Tokens</h2>
+  <p>Tokens = pedaços de texto processados.</p>
+  <div class="box">
+    Quanto maior a resposta,<br>
+    maior o consumo de tokens.
+  </div>
+</section>
+
+<section>
+  <h2>Ferramentas Profissionais</h2>
+  <ul>
+    <li><strong>PromptLayer</strong> – versionamento de prompts</li>
+    <li><strong>LangChain</strong> – pipelines com LLMs</li>
+    <li><strong>OpenPrompt</strong> – pesquisa e experimentação</li>
+  </ul>
+</section>
+
+<section>
+  <h2>ATIVIDADE PESADA 🚀</h2>
+  <div class="box">
+    Cada grupo recebe um prompt ruim<br>
+    e deve transformá-lo em 3 níveis:
+    <ul>
+      <li>Básico</li>
+      <li>Profissional</li>
+      <li>Avançado (CoT ou ToT)</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h3>Prompt Base</h3>
+  <div class="box bad">
+    "Explique banco de dados"
+  </div>
+</section>
+
+<section>
+  <h2>Desafio Extra</h2>
+  <div class="box">
+    Teste os prompts em um LLM e compare:
+    <ul>
+      <li>Qual respondeu melhor?</li>
+      <li>Qual economizou tokens?</li>
+      <li>Qual foi mais confiável?</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Mensagem Final</h2>
+  <div class="box">
+    IA não é sobre perguntar.<br>
+    <strong>É sobre saber perguntar bem.</strong>
+  </div>
+</section>
+
+<section>
+  <h2>Referência</h2>
+  <p><strong>Prompt Engineering Guide</strong></p>
+</section>
+
+<section>
+  <h2>Encerramento</h2>
+  <p>Quem domina prompts, domina a IA.</p>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({ hash: true });
+</script>
+
+</body>
+</html>

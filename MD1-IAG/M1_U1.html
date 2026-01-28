@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>U1 – Introdução à IA Generativa e LLMs</title>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
   <link rel="stylesheet" href="styles.css">
@@ -12,148 +13,223 @@
 <div class="reveal">
 <div class="slides">
 
+<!-- CAPA -->
 <section>
-  <h1>U1</h1>
+  <h1>Módulo 1 – Unidade 1</h1>
   <h3>Introdução à IA Generativa e LLMs</h3>
   <p>Duração: 4 horas</p>
-  <p class="small">Base do módulo de IA Generativa</p>
+  <p class="small">Fundamentos técnicos da IA Generativa</p>
 </section>
 
+<!-- CONTEXTO -->
 <section>
   <h2>Por que essa aula é importante?</h2>
-  <p>A IA generativa muda a forma como software, texto, imagens e código são criados.</p>
-  <div class="box">Não é uma ferramenta. É uma nova forma de trabalhar.</div>
-</section>
-
-<section>
-  <h2>IA tradicional vs IA Generativa</h2>
+  <p>A IA Generativa está mudando a forma como:</p>
   <ul>
-    <li>IA tradicional → classifica, detecta, decide</li>
-    <li>IA generativa → cria conteúdo novo</li>
-    <li>Ela não busca respostas, ela gera respostas</li>
+    <li>Softwares são desenvolvidos</li>
+    <li>Conteúdo é produzido</li>
+    <li>Código é escrito</li>
   </ul>
-</section>
-
-<section>
-  <h2>O que a IA Generativa pode criar?</h2>
-  <ul>
-    <li>Textos</li>
-    <li>Código</li>
-    <li>Imagens</li>
-    <li>Vídeos</li>
-    <li>Áudio e voz</li>
-  </ul>
-</section>
-
-<section>
-  <h2>O que é um LLM?</h2>
-  <p>LLM = Large Language Model</p>
   <div class="box">
-    Um modelo treinado com bilhões de palavras para prever a próxima palavra.
+    Não é só uma ferramenta — é uma mudança de paradigma.
   </div>
 </section>
 
+<!-- EVOLUÇÃO HISTÓRICA -->
+<section>
+  <section>
+    <h2>Evolução histórica da IA conversacional</h2>
+    <ul>
+      <li>1966 – ELIZA (regras e scripts)</li>
+      <li>Anos 90–2000 – Sistemas especialistas</li>
+      <li>2010+ – Machine Learning</li>
+      <li>2017+ – Transformers</li>
+      <li>Hoje – LLMs modernos</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>De ELIZA aos LLMs modernos</h2>
+    <ul>
+      <li>ELIZA: respostas fixas</li>
+      <li>LLMs: aprendizado estatístico em larga escala</li>
+      <li>Capacidade de generalização</li>
+    </ul>
+    <div class="box">
+      O salto veio com dados + poder computacional + novas arquiteturas.
+    </div>
+  </section>
+</section>
+
+<!-- IA TRADICIONAL VS GENERATIVA -->
+<section>
+  <h2>IA Tradicional x IA Generativa</h2>
+  <ul>
+    <li>IA tradicional → classifica, detecta, prevê</li>
+    <li>IA generativa → cria conteúdo novo</li>
+    <li>Não busca respostas prontas, gera respostas</li>
+  </ul>
+</section>
+
+<!-- O QUE É IA GENERATIVA -->
+<section>
+  <h2>O que a IA Generativa pode criar?</h2>
+  <ul>
+    <li>Texto</li>
+    <li>Código</li>
+    <li>Imagens</li>
+    <li>Áudio</li>
+    <li>Vídeo</li>
+  </ul>
+</section>
+
+<!-- LLM -->
+<section>
+  <h2>O que é um LLM?</h2>
+  <p><strong>LLM</strong> = Large Language Model</p>
+  <div class="box">
+    Modelos treinados com bilhões de palavras para prever o próximo token.
+  </div>
+</section>
+
+<!-- TOKENS -->
+<section>
+  <h2>O que são tokens?</h2>
+  <ul>
+    <li>Texto é quebrado em partes menores</li>
+    <li>Palavras, sílabas ou símbolos</li>
+    <li>Modelos trabalham com tokens, não palavras</li>
+  </ul>
+</section>
+
+<!-- FUNCIONAMENTO -->
 <section>
   <h2>Como um LLM funciona?</h2>
   <ul>
-    <li>Ele lê um texto (prompt)</li>
-    <li>Quebra em tokens</li>
+    <li>Recebe um prompt</li>
+    <li>Divide em tokens</li>
     <li>Calcula probabilidades</li>
-    <li>Gera a próxima palavra</li>
+    <li>Gera o próximo token</li>
     <li>Repete o processo</li>
   </ul>
 </section>
 
+<!-- TRANSFORMERS -->
 <section>
-  <h2>LLM não pensa</h2>
-  <p>Ele não entende como humanos.</p>
-  <div class="box">
-    Ele prevê padrões com base em dados gigantescos.
-  </div>
+  <section>
+    <h2>Arquitetura Transformer</h2>
+    <ul>
+      <li>Introduzida em 2017</li>
+      <li>Base dos LLMs modernos</li>
+      <li>Processa texto em paralelo</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Mecanismo de Atenção</h2>
+    <ul>
+      <li>Permite focar nas partes mais relevantes do texto</li>
+      <li>Relaciona palavras distantes</li>
+      <li>Entende contexto</li>
+    </ul>
+    <div class="box">
+      Atenção é o que dá contexto ao modelo.
+    </div>
+  </section>
 </section>
 
+<!-- TREINAMENTO -->
+<section>
+  <section>
+    <h2>Pré-treinamento</h2>
+    <ul>
+      <li>Treinamento em grandes volumes de texto</li>
+      <li>Aprende linguagem e padrões</li>
+      <li>Não é específico para uma tarefa</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Fine-tuning</h2>
+    <ul>
+      <li>Ajuste para tarefas específicas</li>
+      <li>Ex: programação, atendimento, jurídico</li>
+      <li>Inclui feedback humano (RLHF)</li>
+    </ul>
+  </section>
+</section>
+
+<!-- CHATGPT -->
 <section>
   <h2>ChatGPT não é a IA</h2>
   <ul>
-    <li>ChatGPT = interface</li>
-    <li>LLM = cérebro</li>
-    <li>API = forma de acesso</li>
+    <li>ChatGPT → interface</li>
+    <li>LLM → modelo</li>
+    <li>API → acesso programático</li>
   </ul>
 </section>
 
+<!-- EXEMPLOS -->
 <section>
   <h2>Exemplos de LLMs</h2>
   <ul>
     <li>GPT-4 / GPT-5</li>
     <li>Claude</li>
-    <li>LLaMA</li>
     <li>Gemini</li>
+    <li>LLaMA</li>
   </ul>
 </section>
 
+<!-- IA E PROGRAMAÇÃO -->
 <section>
   <h2>IA Generativa e Programadores</h2>
   <p>O programador deixa de ser apenas quem escreve código.</p>
   <div class="box">
-    Ele passa a ser quem orienta uma IA a criar soluções.
+    Passa a ser quem orienta, valida e integra soluções com IA.
   </div>
 </section>
 
+<!-- FERRAMENTAS -->
 <section>
-  <h2>O novo fluxo de desenvolvimento</h2>
+  <h2>Ferramentas para explorar IA Generativa</h2>
   <ul>
-    <li>Você descreve o problema</li>
-    <li>A IA gera o código</li>
-    <li>Você valida, corrige e integra</li>
+    <li>OpenAI Playground</li>
+    <li>Hugging Face</li>
+    <li>Google Vertex AI</li>
   </ul>
 </section>
 
+<!-- REFERÊNCIA -->
 <section>
-  <h2>IA como copiloto</h2>
-  <ul>
-    <li>Explica código</li>
-    <li>Gera funções</li>
-    <li>Ajuda a debugar</li>
-    <li>Traduz lógica</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Limitações dos LLMs</h2>
-  <ul>
-    <li>Podem errar</li>
-    <li>Podem inventar respostas</li>
-    <li>Dependem do prompt</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Por que isso é revolucionário?</h2>
+  <h2>Onde estudar mais?</h2>
   <div class="box">
-    Pela primeira vez, qualquer pessoa pode conversar com um sistema que escreve, cria e programa.
+    📚 huggingface.co/learn<br>
+    Conteúdo técnico e acessível sobre IA Generativa.
   </div>
 </section>
 
+<!-- ATIVIDADE -->
 <section>
   <h2>Atividade prática</h2>
-  <p>Peça para um LLM:</p>
   <ul>
     <li>Gerar um texto</li>
     <li>Gerar um código</li>
-    <li>Explicar um conceito</li>
+    <li>Explicar um conceito técnico</li>
   </ul>
 </section>
 
+<!-- REFLEXÃO -->
 <section>
-  <h2>Reflexão</h2>
+  <h2>Reflexão final</h2>
   <div class="box">
-    Quem usar IA trabalhará melhor do que quem não usar.
+    Entender como a IA funciona é o primeiro passo para usá-la bem.
   </div>
 </section>
 
+<!-- ENCERRAMENTO -->
 <section>
-  <h2>Encerramento da U1</h2>
-  <p>Na próxima unidade: ética e uso responsável.</p>
+  <h2>Encerramento da Unidade 1</h2>
+  <p>Na próxima unidade: Ética e Uso Responsável da IA.</p>
 </section>
 
 </div>
@@ -161,7 +237,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
 <script>
-Reveal.initialize({ hash: true });
+Reveal.initialize({ hash: true, slideNumber: true });
 </script>
 
 </body>

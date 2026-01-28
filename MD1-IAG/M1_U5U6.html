@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>U5 – Exploração de APIs de LLMs</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
+
+  <style>
+    .box {
+      background: #f4f4f5;
+      border-left: 6px solid #4f46e5;
+      padding: 18px;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+    ul li { margin-bottom: 10px; }
+    .warning { border-left-color: #dc2626; }
+    .good { border-left-color: #16a34a; }
+  </style>
+</head>
+
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section>
+  <h1>U5</h1>
+  <h3>Exploração de APIs de LLMs</h3>
+  <p>Duração: 4 horas</p>
+  <p>Integração real com IA Generativa</p>
+</section>
+
+<section>
+  <h2>Objetivo da Unidade</h2>
+  <ul>
+    <li>Entender comunicação com APIs REST</li>
+    <li>Consumir LLMs via código</li>
+    <li>Controlar parâmetros e custos</li>
+    <li>Usar IA de forma profissional</li>
+  </ul>
+</section>
+
+<section>
+  <h2>O que é uma API?</h2>
+  <p>API = Interface de Programação de Aplicações</p>
+  <div class="box">
+    Um contrato entre sistemas para troca de dados.
+  </div>
+</section>
+
+<section>
+  <h2>API REST</h2>
+  <ul>
+    <li>Baseada em HTTP</li>
+    <li>Usa métodos: GET, POST</li>
+    <li>Troca dados em JSON</li>
+  </ul>
+</section>
+
+<section>
+  <h2>LLMs via API</h2>
+  <div class="box">
+    LLMs não rodam no seu computador.<br>
+    Eles são acessados por APIs na nuvem.
+  </div>
+</section>
+
+<section>
+  <h2>Fluxo real de uma chamada</h2>
+  <ul>
+    <li>Usuário envia prompt</li>
+    <li>Sistema monta requisição</li>
+    <li>API valida a chave</li>
+    <li>LLM processa</li>
+    <li>Resposta retorna</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Autenticação</h2>
+  <p>APIs usam <strong>API Key</strong></p>
+  <div class="box warning">
+    Nunca exponha sua chave no frontend.
+  </div>
+</section>
+
+<section>
+  <h2>Parâmetros importantes</h2>
+  <ul>
+    <li><strong>model</strong></li>
+    <li><strong>temperature</strong></li>
+    <li><strong>max_tokens</strong></li>
+    <li><strong>messages / prompt</strong></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Temperatura</h2>
+  <ul>
+    <li>0.0 – respostas objetivas</li>
+    <li>0.7 – equilíbrio</li>
+    <li>1.0+ – criatividade</li>
+  </ul>
+</section>
+
+<section>
+  <h2>max_tokens</h2>
+  <p>Define o tamanho máximo da resposta.</p>
+  <div class="box">
+    Menos tokens = menos custo.
+  </div>
+</section>
+
+<section>
+  <h2>Tokens e custo</h2>
+  <ul>
+    <li>Cada token tem custo</li>
+    <li>Entrada + saída contam</li>
+    <li>Prompts longos = mais caro</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Análise de custo</h2>
+  <div class="box">
+    Bons prompts economizam dinheiro.
+  </div>
+</section>
+
+<section>
+  <h2>Ferramenta: Postman</h2>
+  <ul>
+    <li>Testar APIs manualmente</li>
+    <li>Visualizar JSON</li>
+    <li>Simular produção</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Exemplo conceitual no Postman</h2>
+  <div class="box">
+    POST → /v1/chat/completions<br>
+    Headers: Authorization<br>
+    Body: prompt + parâmetros
+  </div>
+</section>
+
+<section>
+  <h2>Python + requests</h2>
+  <div class="box">
+    Ideal para scripts, automações e backend.
+  </div>
+</section>
+
+<section>
+  <h2>LangChain</h2>
+  <ul>
+    <li>Abstrai chamadas de API</li>
+    <li>Cria pipelines com LLMs</li>
+    <li>Gerencia contexto</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Por que usar wrappers?</h2>
+  <ul>
+    <li>Menos código repetido</li>
+    <li>Mais organização</li>
+    <li>Escalabilidade</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Problemas comuns</h2>
+  <ul>
+    <li>Prompt ruim</li>
+    <li>Contexto gigante</li>
+    <li>Erro de autenticação</li>
+    <li>Estouro de tokens</li>
+  </ul>
+</section>
+
+<section>
+  <h2>ATIVIDADE PESADA 🚀</h2>
+  <div class="box">
+    Em grupo, modelem uma API fictícia que:
+    <ul>
+      <li>Recebe um prompt</li>
+      <li>Define temperatura</li>
+      <li>Limita tokens</li>
+      <li>Retorna resposta</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Desafio Extra</h2>
+  <div class="box">
+    Compare dois prompts:
+    <ul>
+      <li>Qual é mais barato?</li>
+      <li>Qual responde melhor?</li>
+      <li>Qual usaria em produção?</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Referência</h2>
+  <p><strong>platform.openai.com/docs</strong></p>
+</section>
+
+<section>
+  <h2>Mensagem Final</h2>
+  <div class="box good">
+    IA boa não é a mais inteligente.<br>
+    É a mais bem integrada.
+  </div>
+</section>
+
+<section>
+  <h2>Encerramento</h2>
+  <p>Você agora entende como sistemas reais usam IA.</p>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'slide'
+  });
+</script>
+</body>
+</html>
