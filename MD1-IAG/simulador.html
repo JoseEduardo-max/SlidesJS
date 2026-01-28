@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulador de API de LLM</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f6ff;
+      padding: 30px;
+    }
+    textarea, button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+    }
+    .box {
+      background: #e6e9ff;
+      padding: 15px;
+      margin-top: 20px;
+      border-left: 5px solid #0A1AFF;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Simulador de API de LLM</h2>
+
+  <textarea id="prompt" placeholder="Digite seu prompt..."></textarea>
+  <button onclick="enviarPrompt()">Enviar para API</button>
+
+  <div class="box" id="resposta">Resposta aparecerá aqui</div>
+
+  <script>
+    function enviarPrompt() {
+      const prompt = document.getElementById("prompt").value;
+
+      document.getElementById("resposta").innerText =
+        "API recebeu o prompt...\nLLM processando...\n\nResposta simulada:\n" +
+        prompt.toUpperCase();
+    }
+  </script>
+
+</body>
+</html>

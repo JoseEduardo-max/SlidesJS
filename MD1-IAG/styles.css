@@ -1,28 +1,33 @@
 :root {
-      --royal-blue: #0b3c8c;
-    }
+    --azul-royal: #0A1AFF;
+    --azul-claro: #E6E9FF;
+}
 
-    body {
-      background: #ffffff;
-    }
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+    color: var(--azul-royal);
+}
 
-    .reveal h1, .reveal h2, .reveal h3 {
-      color: var(--royal-blue);
-    }
+.reveal p,
+.reveal li {
+    color: #000;
+    font-size: 1.1em;
+}
 
-    .reveal p, .reveal li {
-      color: #000000;
-      font-size: 0.9em;
-    }
+.reveal ul {
+    margin-top: 20px;
+}
 
-    .highlight {
-      color: var(--royal-blue);
-      font-weight: bold;
-    }
+.box {
+    margin-top: 25px;
+    padding: 20px;
+    border-left: 6px solid var(--azul-royal);
+    background-color: var(--azul-claro);
+    font-size: 1.05em;
+    border-radius: 6px;
+}
 
-    .box {
-      border-left: 6px solid var(--royal-blue);
-      padding: 10px 16px;
-      margin-top: 20px;
-      background: #f4f7fb;
-    }
+small {
+    color: #444;
+}

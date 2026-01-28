@@ -1,54 +1,215 @@
 <!doctype html>
-<html lang='pt-BR'>
+<html lang="pt-BR">
 
 <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <title>U5 – Exploração de APIs de LLMs</title>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css'>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css'>
+
+    <!-- Reveal.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
+
+    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class='reveal'>
-        <div class='slides'>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- CAPA -->
             <section>
                 <h1>U5</h1>
                 <h3>Exploração de APIs de LLMs</h3>
-                <p>Duração: 4h</p>
+                <p>Duração total: <strong>4 horas</strong></p>
+                <small>IA Aplicada ao Desenvolvimento</small>
             </section>
+
+            <!-- AGENDA -->
             <section>
-                <h2>O que é uma API?</h2>
-                <p>É uma interface que permite um sistema conversar com outro.</p>
-            </section>
-            <section>
-                <h2>Como LLMs usam APIs</h2>
+                <h2>Agenda da Aula</h2>
                 <ul>
-                    <li>Aplicativo envia prompt</li>
-                    <li>Modelo processa</li>
-                    <li>Resposta é retornada</li>
+                    <li>O que é uma API</li>
+                    <li>Como LLMs funcionam via API</li>
+                    <li>Conceitos técnicos essenciais</li>
+                    <li>Fluxo real de chamadas</li>
+                    <li>Atividades práticas</li>
                 </ul>
             </section>
+
+            <!-- MÓDULO 1 -->
             <section>
-                <h2>Conceitos importantes</h2>
+                <section>
+                    <h2>Módulo 1</h2>
+                    <h3>Introdução às APIs</h3>
+                </section>
+
+                <section>
+                    <h2>O que é uma API?</h2>
+                    <p>API significa <strong>Interface de Programação de Aplicações</strong>.</p>
+                    <div class="box">
+                        É uma ponte que permite que sistemas diferentes se comuniquem.
+                    </div>
+                </section>
+
+                <section>
+                    <h2>APIs no dia a dia</h2>
+                    <ul>
+                        <li>Login com Google</li>
+                        <li>Pagamentos online</li>
+                        <li>Uber e Google Maps</li>
+                        <li>Redes sociais</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>API não é interface gráfica</h2>
+                    <p>APIs não possuem botões ou telas.</p>
+                    <div class="box">
+                        APIs trabalham com dados (JSON).
+                    </div>
+                </section>
+            </section>
+
+            <!-- MÓDULO 2 -->
+            <section>
+                <section>
+                    <h2>Módulo 2</h2>
+                    <h3>LLMs e APIs</h3>
+                </section>
+
+                <section>
+                    <h2>O que é um LLM?</h2>
+                    <ul>
+                        <li>Large Language Model</li>
+                        <li>Treinado com bilhões de textos</li>
+                        <li>Especialista em linguagem</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Como acessamos um LLM</h2>
+                    <div class="box">
+                        Aplicações acessam LLMs através de APIs.
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Fluxo básico</h2>
+                    <ul>
+                        <li>Usuário escreve</li>
+                        <li>Aplicação envia o prompt</li>
+                        <li>API processa</li>
+                        <li>Resposta retorna</li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- MÓDULO 3 -->
+            <section>
+                <section>
+                    <h2>Módulo 3</h2>
+                    <h3>Conceitos Técnicos</h3>
+                </section>
+
+                <section>
+                    <h2>Tokens</h2>
+                    <p>Tokens são pedaços de texto usados pelo modelo.</p>
+                    <div class="box">
+                        "Olá, tudo bem?" → vários tokens
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Temperatura</h2>
+                    <ul>
+                        <li>Baixa: respostas mais previsíveis</li>
+                        <li>Alta: respostas mais criativas</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Contexto</h2>
+                    <p>Contexto é o histórico da conversa.</p>
+                    <div class="box">
+                        Sem contexto, o modelo não lembra do que foi dito antes.
+                    </div>
+                </section>
+            </section>
+
+            <!-- MÓDULO 4 -->
+            <section>
+                <section>
+                    <h2>Módulo 4</h2>
+                    <h3>Fluxo de uma API</h3>
+                </section>
+
+                <section>
+                    <h2>Pseudocódigo</h2>
+                    <div class="box">
+                        enviar(prompt) → API → LLM → resposta → aplicativo
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Exemplo conceitual</h2>
+                    <div class="box">
+                        "Explique o que é uma API para iniciantes"
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Problemas comuns</h2>
+                    <ul>
+                        <li>Prompt mal formulado</li>
+                        <li>Contexto muito longo</li>
+                        <li>Limite de tokens</li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- MÓDULO 5 -->
+            <section>
+                <section>
+                    <h2>Módulo 5</h2>
+                    <h3>Atividades Práticas</h3>
+                </section>
+
+                <section>
+                    <h2>Atividade em grupo</h2>
+                    <p>Interprete o fluxo de uma chamada de API.</p>
+                    <div class="box">
+                        Quem é o usuário? Quem é a API? Quem é o LLM?
+                    </div>
+                </section>
+            </section>
+
+            <!-- ENCERRAMENTO -->
+            <section>
+                <h2>Conclusão</h2>
                 <ul>
-                    <li>Tokens</li>
-                    <li>Temperatura</li>
-                    <li>Contexto</li>
+                    <li>O que é uma API</li>
+                    <li>Como LLMs funcionam</li>
+                    <li>Como aplicações usam IA</li>
                 </ul>
             </section>
+
             <section>
-                <h2>Pseudocódigo</h2>
-                <div class='box'>enviar(prompt) → API → LLM → resposta → aplicativo</div>
+                <h1>Perguntas?</h1>
             </section>
-            <section>
-                <h2>Atividade</h2>
-                <div class='box'>Interpretar um fluxo de chamada de API.</div>
-            </section>
+
         </div>
     </div>
-    <script src='https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js'></script>
-    <script>Reveal.initialize({ hash: true });</script>
+
+    <!-- Reveal.js -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'slide'
+        });
+    </script>
 </body>
 
 </html>
