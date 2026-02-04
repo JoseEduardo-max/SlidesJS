@@ -1,267 +1,333 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <title>Módulo 02 – Embeddings e Vetorização</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
-  <link rel="stylesheet" href="styles.css">
+<head>
+    <meta charset="utf-8">
+    <title>Módulo 02 – Embeddings e Vetorização</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<div class="reveal">
-  <div class="slides">
+    <div class="reveal">
+        <div class="slides">
 
-    <!-- Slide 1 -->
-    <section>
-      <div class="slide-card center">
-        <h2 class="slide-title">Módulo 02</h2>
-        <h3 class="slide-subtitle">Embeddings, Vetorização e RAG</h3>
-        <p>
-          Nesta aula vamos entender como textos viram números  
-          e por que isso é essencial para a <span class="highlight">IA moderna</span>.
-        </p>
-      </div>
-    </section>
+            <!-- Slide 1 -->
+            <section>
+                <div class="slide-card center">
+                    <h2 class="slide-title">Módulo 02</h2>
+                    <h3 class="slide-subtitle">Embeddings, Vetorização e RAG</h3>
+                    <p>
+                        Nesta aula vamos entender como textos viram números
+                        e por que isso é essencial para a <span class="highlight">IA moderna</span>.
+                    </p>
+                </div>
+            </section>
 
-    <!-- Slide 2 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">Problema central</h3>
-        <p>
-          Computadores não entendem palavras.<br>
-          Eles entendem <span class="highlight">números</span>.
-        </p>
-        <p class="small">
-          Então como uma IA entende o significado de um texto?
-        </p>
-      </div>
-    </section>
+            <!-- Slide 2 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">Problema central</h3>
+                    <p>
+                        Computadores não entendem palavras.<br>
+                        Eles entendem <span class="highlight">números</span>.
+                    </p>
+                    <p class="small">
+                        Então como uma IA entende o significado de um texto?
+                    </p>
+                </div>
+            </section>
 
-    <!-- Slide 3 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">O que é Vetorização?</h3>
-        <p>
-          Vetorização é o processo de transformar texto em números.
-        </p>
-        <p>
-          Cada palavra, frase ou documento vira um <span class="highlight">vetor</span>.
-        </p>
-        <p class="small">
-          Vetor = lista de números que representa significado.
-        </p>
-      </div>
-    </section>
+            <!-- Slide 3 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">O que é Vetorização?</h3>
+                    <p>
+                        Vetorização é o processo de transformar texto em números.
+                    </p>
+                    <p>
+                        Cada palavra, frase ou documento vira um <span class="highlight">vetor</span>.
+                    </p>
+                    <p class="small">
+                        Vetor = lista de números que representa significado.
+                    </p>
+                </div>
+            </section>
 
-    <!-- Slide 4 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">Exemplo simples</h3>
-        <p class="example">
-          Texto: <em>"Gato gosta de leite"</em>
-        </p>
-        <p class="example">
-          Vetor:<br>
-          [0.12, 0.98, 0.44, 0.01, ...]
-        </p>
-        <p class="small">
-          A IA trabalha apenas com esses números.
-        </p>
-      </div>
-    </section>
+            <!-- Slide 4 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">Exemplo simples</h3>
+                    <p class="example">
+                        Texto: <em>"Gato gosta de leite"</em>
+                    </p>
+                    <p class="example">
+                        Vetor:<br>
+                        [0.12, 0.98, 0.44, 0.01, ...]
+                    </p>
+                    <p class="small">
+                        A IA trabalha apenas com esses números.
+                    </p>
+                </div>
+            </section>
 
-    <!-- Slide 5 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">Por que isso é importante?</h3>
-        <ul>
-          <li>Buscar textos parecidos</li>
-          <li>Responder perguntas</li>
-          <li>Recomendar conteúdos</li>
-          <li>Construir sistemas <span class="highlight">RAG</span></li>
-        </ul>
-      </div>
-    </section>
+            <!-- Slide 5 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">Por que isso é importante?</h3>
+                    <ul>
+                        <li>Buscar textos parecidos</li>
+                        <li>Responder perguntas</li>
+                        <li>Recomendar conteúdos</li>
+                        <li>Construir sistemas <span class="highlight">RAG</span></li>
+                    </ul>
+                </div>
+            </section>
 
-    <!-- Slide 6 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">Técnica 1: TF-IDF</h3>
-        <p>
-          Técnica estatística baseada em frequência de palavras.
-        </p>
-        <p class="example">
-          TF = frequência no texto<br>
-          IDF = raridade no conjunto
-        </p>
-        <p class="small">
-          Não entende contexto ou significado profundo.
-        </p>
-      </div>
-    </section>
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">🧠 Atividade 1 — Pensando como a IA</h3>
+                    <p>
+                        Observe as frases:
+                    </p>
+                    <ul>
+                        <li>"Eu gosto de programar"</li>
+                        <li>"Eu amo escrever código"</li>
+                        <li>"Banana é uma fruta"</li>
+                    </ul>
+                    <p class="small">
+                        Quais frases você acha que ficariam mais próximas em um espaço vetorial?
+                    </p>
+                </div>
+            </section>
 
-    <!-- Slide 7 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">Limitação do TF-IDF</h3>
-        <p>"Banco" pode significar:</p>
-        <ul>
-          <li>Banco financeiro</li>
-          <li>Banco de sentar</li>
-        </ul>
-        <p class="small">
-          TF-IDF não entende essa diferença.
-        </p>
-      </div>
-    </section>
+            <!-- Slide 6 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">Técnica 1: TF-IDF</h3>
+                    <p>
+                        Técnica estatística baseada em frequência de palavras.
+                    </p>
+                    <p class="example">
+                        TF = frequência no texto<br>
+                        IDF = raridade no conjunto
+                    </p>
+                    <p class="small">
+                        Não entende contexto ou significado profundo.
+                    </p>
+                </div>
+            </section>
 
-    <!-- Slide 8 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">Técnica 2: Word2Vec</h3>
-        <p>
-          Aprende o significado das palavras pelo contexto.
-        </p>
-        <p>
-          Palavras usadas em contextos parecidos ficam
-          <span class="highlight">próximas no espaço vetorial</span>.
-        </p>
-      </div>
-    </section>
+            <!-- Slide 7 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">Limitação do TF-IDF</h3>
+                    <p>"Banco" pode significar:</p>
+                    <ul>
+                        <li>Banco financeiro</li>
+                        <li>Banco de sentar</li>
+                    </ul>
+                    <p class="small">
+                        TF-IDF não entende essa diferença.
+                    </p>
+                </div>
+            </section>
 
-    <!-- Slide 9 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">Exemplo Word2Vec</h3>
-        <p class="example">
-          Rei − Homem + Mulher ≈ <span class="highlight">Rainha</span>
-        </p>
-        <p class="small">
-          Aqui a IA começa a capturar semântica.
-        </p>
-      </div>
-    </section>
+            <!-- Slide 8 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">Técnica 2: Word2Vec</h3>
+                    <p>
+                        Aprende o significado das palavras pelo contexto.
+                    </p>
+                    <p>
+                        Palavras usadas em contextos parecidos ficam
+                        <span class="highlight">próximas no espaço vetorial</span>.
+                    </p>
+                </div>
+            </section>
 
-    <!-- Slide 10 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">Limitação do Word2Vec</h3>
-        <p>
-          Cada palavra tem apenas um significado.
-        </p>
-        <p class="small">
-          "Banco" continua sendo um problema.
-        </p>
-      </div>
-    </section>
+            <!-- Slide 9 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">Exemplo Word2Vec</h3>
+                    <p class="example">
+                        Rei − Homem + Mulher ≈ <span class="highlight">Rainha</span>
+                    </p>
+                    <p class="small">
+                        Aqui a IA começa a capturar semântica.
+                    </p>
+                </div>
+            </section>
 
-    <!-- Slide 11 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">Modelos modernos</h3>
-        <p>
-          O significado depende da frase inteira.
-        </p>
-        <p>
-          A mesma palavra gera vetores diferentes
-          dependendo do <span class="highlight">contexto</span>.
-        </p>
-      </div>
-    </section>
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">🧪 Atividade 2 — TF-IDF na prática</h3>
+                    <p>
+                        Analise os textos:
+                    </p>
+                    <ul>
+                        <li>"Banco abriu uma nova agência"</li>
+                        <li>"Sentei no banco da praça"</li>
+                    </ul>
+                    <p class="small">
+                        O TF-IDF consegue diferenciar esses significados?
+                    </p>
+                </div>
+            </section>
 
-    <!-- Slide 12 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">Embeddings modernos</h3>
-        <ul>
-          <li>BERT</li>
-          <li>Sentence Transformers</li>
-          <li>OpenAI Embeddings</li>
-        </ul>
-        <p class="small">
-          Base de quase toda IA generativa atual.
-        </p>
-      </div>
-    </section>
+            <!-- Slide 10 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">Limitação do Word2Vec</h3>
+                    <p>
+                        Cada palavra tem apenas um significado.
+                    </p>
+                    <p class="small">
+                        "Banco" continua sendo um problema.
+                    </p>
+                </div>
+            </section>
 
-    <!-- Slide 13 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">Busca semântica</h3>
-        <p>
-          Não busca palavras iguais.<br>
-          Busca <span class="highlight">significado parecido</span>.
-        </p>
-        <p class="small">
-          Essencial para RAG.
-        </p>
-      </div>
-    </section>
+            <!-- Slide 11 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">Modelos modernos</h3>
+                    <p>
+                        O significado depende da frase inteira.
+                    </p>
+                    <p>
+                        A mesma palavra gera vetores diferentes
+                        dependendo do <span class="highlight">contexto</span>.
+                    </p>
+                </div>
+            </section>
 
-    <!-- Slide 14 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">Bancos Vetoriais</h3>
-        <p>
-          Armazenam vetores e permitem
-          busca por similaridade.
-        </p>
-      </div>
-    </section>
+            <!-- Slide 12 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">Embeddings modernos</h3>
+                    <ul>
+                        <li>BERT</li>
+                        <li>Sentence Transformers</li>
+                        <li>OpenAI Embeddings</li>
+                    </ul>
+                    <p class="small">
+                        Base de quase toda IA generativa atual.
+                    </p>
+                </div>
+            </section>
 
-    <!-- Slide 15 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">Ferramentas populares</h3>
-        <ul>
-          <li><strong>Pinecone</strong> – gerenciado e escalável</li>
-          <li><strong>FAISS</strong> – open source (Meta)</li>
-          <li><strong>Chroma</strong> – simples e local</li>
-        </ul>
-      </div>
-    </section>
+            <!-- Slide 13 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">Busca semântica</h3>
+                    <p>
+                        Não busca palavras iguais.<br>
+                        Busca <span class="highlight">significado parecido</span>.
+                    </p>
+                    <p class="small">
+                        Essencial para RAG.
+                    </p>
+                </div>
+            </section>
 
-    <!-- Slide 16 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">Exemplo de uso</h3>
-        <p class="flow">
-          Documentos → Embeddings → Banco Vetorial  
-          → Pergunta → Busca → Resposta
-        </p>
-      </div>
-    </section>
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">🤖 Atividade 3 — Testando a IA</h3>
+                    <p>
+                        Pergunte à IA:
+                    </p>
+                    <p class="example">
+                        "Quais palavras são semanticamente próximas de 'programador'?"
+                    </p>
+                    <p class="small">
+                        Observe se ela entende o contexto.
+                    </p>
+                </div>
+            </section>
 
-    <!-- Slide 17 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">Ligação com RAG</h3>
-        <p>
-          RAG = Recuperar informação antes de gerar resposta.
-        </p>
-        <p class="small">
-          Embeddings são o coração do RAG.
-        </p>
-      </div>
-    </section>
+            <!-- Slide 14 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">Bancos Vetoriais</h3>
+                    <p>
+                        Armazenam vetores e permitem
+                        busca por similaridade.
+                    </p>
+                </div>
+            </section>
 
-    <!-- Slide 18 -->
-    <section>
-      <div class="slide-card">
-        <h3 class="slide-title">Referência</h3>
-        <p>📚 pinecone.io/docs</p>
-      </div>
-    </section>
+            <!-- Slide 15 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">Ferramentas populares</h3>
+                    <ul>
+                        <li><strong>Pinecone</strong> – gerenciado e escalável</li>
+                        <li><strong>FAISS</strong> – open source (Meta)</li>
+                        <li><strong>Chroma</strong> – simples e local</li>
+                    </ul>
+                </div>
+            </section>
 
-  </div>
-</div>
+            <!-- Slide 16 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">Exemplo de uso</h3>
+                    <p class="flow">
+                        Documentos → Embeddings → Banco Vetorial
+                        → Pergunta → Busca → Resposta
+                    </p>
+                </div>
+            </section>
 
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
-<script>
-  Reveal.initialize();
-</script>
+            <!-- Slide 17 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">Ligação com RAG</h3>
+                    <p>
+                        RAG = Recuperar informação antes de gerar resposta.
+                    </p>
+                    <p class="small">
+                        Embeddings são o coração do RAG.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">🔗 Atividade 4 — Simulação de RAG</h3>
+                    <p>
+                        Imagine um sistema que responde perguntas usando documentos.
+                    </p>
+                    <p class="flow">
+                        Documento → Embedding → Busca → Resposta
+                    </p>
+                    <p class="small">
+                        Vamos simular isso passo a passo.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Slide 18 -->
+            <section>
+                <div class="slide-card">
+                    <h3 class="slide-title">Referência</h3>
+                    <p>📚 pinecone.io/docs</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize();
+    </script>
 
 </body>
+
 </html>
