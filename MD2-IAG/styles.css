@@ -1,0 +1,105 @@
+  /* ====== BASE ====== */
+  body {
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    color: #ffffff;
+    font-family: 'Segoe UI', 'Inter', sans-serif;
+  }
+
+  .reveal {
+    font-size: 32px;
+  }
+
+  section {
+    background: rgba(20, 20, 20, 0.85);
+    border-radius: 16px;
+    padding: 50px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  }
+
+  /* ====== TÍTULOS ====== */
+  h2 {
+    font-size: 2.6em;
+    color: #1e90ff;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 1.9em;
+    color: #ff3b3b;
+    margin-bottom: 20px;
+  }
+
+  /* ====== TEXTO ====== */
+  p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    color: #e6e6e6;
+  }
+
+  strong {
+    color: #ff3b3b;
+    font-weight: 700;
+  }
+
+  em {
+    color: #1e90ff;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* ====== LISTAS ====== */
+  ul {
+    margin-top: 20px;
+  }
+
+  li {
+    margin-bottom: 14px;
+    font-size: 1.05em;
+    position: relative;
+    padding-left: 20px;
+  }
+
+  li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #1e90ff;
+    font-weight: bold;
+  }
+
+  /* ====== TEXTO PEQUENO ====== */
+  .small {
+    font-size: 0.75em;
+    color: #b3b3b3;
+    margin-top: 15px;
+  }
+
+  /* ====== DESTAQUE TIPO CARD ====== */
+  section p + p {
+    margin-top: 16px;
+  }
+
+  /* ====== TRANSIÇÕES ====== */
+  .reveal .slides section {
+    transition: transform 0.6s ease, opacity 0.6s ease;
+  }
+
+  /* ====== LINK / REFERÊNCIA ====== */
+  a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  a:hover {
+    color: #ff3b3b;
+  }
+
+  /* ====== BARRA DE PROGRESSO ====== */
+  .reveal .progress {
+    background: #333;
+  }
+
+  .reveal .progress span {
+    background: linear-gradient(90deg, #ff3b3b, #1e90ff);
+  }
