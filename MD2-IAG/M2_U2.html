@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Módulo 02 – RAG e Recuperação de Informação</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="reveal">
+  <div class="slides">
+
+    <!-- SLIDE 1 -->
+    <section>
+      <h2>Módulo 02 – Aula 2</h2>
+      <h3>Recuperação de Informação e RAG</h3>
+      <p>
+        Como buscar informação relevante  
+        antes de pedir uma resposta à IA.
+      </p>
+    </section>
+
+    <!-- SLIDE 2 -->
+    <section>
+      <h3>O problema das IAs sozinhas</h3>
+      <p>
+        Modelos de linguagem não sabem:
+      </p>
+      <ul>
+        <li>Dados internos da empresa</li>
+        <li>Documentos privados</li>
+        <li>Informações atualizadas</li>
+      </ul>
+    </section>
+
+    <!-- SLIDE 3 -->
+    <section>
+      <h3>O que acontece sem RAG?</h3>
+      <p>
+        A IA tenta responder mesmo sem saber.
+      </p>
+      <p><strong>Isso gera:</strong></p>
+      <ul>
+        <li>Alucinação</li>
+        <li>Respostas genéricas</li>
+        <li>Erros graves</li>
+      </ul>
+    </section>
+
+    <!-- SLIDE 4 -->
+    <section>
+      <h3>O que é RAG?</h3>
+      <p>
+        <strong>RAG</strong> significa  
+        <em>Retrieval Augmented Generation</em>
+      </p>
+      <p>
+        Buscar informação relevante  
+        <strong>antes</strong> de gerar a resposta.
+      </p>
+    </section>
+
+    <!-- SLIDE 5 -->
+    <section>
+      <h3>Ideia central do RAG</h3>
+      <p>
+        A IA não responde sozinha.
+      </p>
+      <p>
+        Ela consulta documentos,  
+        recupera contexto e só então responde.
+      </p>
+    </section>
+
+    <!-- SLIDE 6 -->
+    <section>
+      <h3>Pipeline básica do RAG</h3>
+      <ol>
+        <li>Indexação</li>
+        <li>Consulta vetorial</li>
+        <li>Geração da resposta</li>
+      </ol>
+    </section>
+
+    <!-- SLIDE 7 -->
+    <section>
+      <h3>Passo 1 – Indexação</h3>
+      <p>
+        Documentos são transformados  
+        em embeddings e armazenados.
+      </p>
+    </section>
+
+    <!-- SLIDE 8 -->
+    <section>
+      <h3>Passo 2 – Consulta vetorial</h3>
+      <p>
+        A pergunta do usuário vira um vetor.
+      </p>
+      <p>
+        O sistema busca os documentos  
+        mais semelhantes.
+      </p>
+    </section>
+
+    <!-- SLIDE 9 -->
+    <section>
+      <h3>Passo 3 – Geração</h3>
+      <p>
+        A IA recebe:
+      </p>
+      <ul>
+        <li>Pergunta do usuário</li>
+        <li>Documentos recuperados</li>
+      </ul>
+      <p>
+        E gera uma resposta contextual.
+      </p>
+    </section>
+
+    <!-- SLIDE 10 -->
+    <section>
+      <h3>Exemplo real</h3>
+      <p>
+        Pergunta:
+        <em>"Qual é a política de férias da empresa?"</em>
+      </p>
+      <p>
+        A IA consulta o manual interno  
+        antes de responder.
+      </p>
+    </section>
+
+    <!-- SLIDE 11 -->
+    <section>
+      <h3>Atividade 1</h3>
+      <p>
+        Simulação manual de um sistema RAG.
+      </p>
+      <p>
+        Vocês vão ser o “banco vetorial”.
+      </p>
+    </section>
+
+    <!-- SLIDE 12 -->
+    <section>
+      <h3>Frameworks de RAG</h3>
+      <ul>
+        <li>LangChain</li>
+        <li>LlamaIndex</li>
+        <li>Haystack</li>
+      </ul>
+    </section>
+
+    <!-- SLIDE 13 -->
+    <section>
+      <h3>LangChain</h3>
+      <p>
+        Framework para criar pipelines de IA.
+      </p>
+      <p>
+        Conecta LLMs, embeddings, memória e RAG.
+      </p>
+    </section>
+
+    <!-- SLIDE 14 -->
+    <section>
+      <h3>LlamaIndex</h3>
+      <p>
+        Focado em dados e indexação.
+      </p>
+      <p>
+        Muito usado para RAG com documentos.
+      </p>
+    </section>
+
+    <!-- SLIDE 15 -->
+    <section>
+      <h3>Haystack</h3>
+      <p>
+        Framework completo para QA e busca.
+      </p>
+      <p>
+        Bastante usado em produção.
+      </p>
+    </section>
+
+    <!-- SLIDE 16 -->
+    <section>
+      <h3>Atividade 2</h3>
+      <p>
+        Criar um fluxo RAG no papel.
+      </p>
+    </section>
+
+    <!-- SLIDE 17 -->
+    <section>
+      <h3>Boas práticas em RAG</h3>
+      <ul>
+        <li>Chunking correto</li>
+        <li>Embeddings de qualidade</li>
+        <li>Limitar contexto</li>
+        <li>Validar resposta</li>
+      </ul>
+    </section>
+
+    <!-- SLIDE 18 -->
+    <section>
+      <h3>Encerramento</h3>
+      <p>
+        RAG transforma LLMs  
+        em sistemas confiáveis.
+      </p>
+      <p>
+        Sem RAG, não existe IA corporativa segura.
+      </p>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script>
+  Reveal.initialize();
+</script>
+
+</body>
+</html>

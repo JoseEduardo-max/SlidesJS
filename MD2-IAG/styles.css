@@ -1,105 +1,132 @@
-  /* ====== BASE ====== */
-  body {
-    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
-    color: #ffffff;
-    font-family: 'Segoe UI', 'Inter', sans-serif;
-  }
+/* ===============================
+   BASE GERAL
+================================ */
+body {
+  background: #2b2b2b; /* cinza escuro sólido */
+  color: #ffffff;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
 
-  .reveal {
-    font-size: 32px;
-  }
+.reveal {
+  font-size: 30px;
+}
 
-  section {
-    background: rgba(20, 20, 20, 0.85);
-    border-radius: 16px;
-    padding: 50px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-  }
+/* ===============================
+   SLIDES
+================================ */
+.reveal section {
+  background: #3a3a3a; /* cinza médio */
+  border-radius: 14px;
+  padding: 48px 56px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.45);
+}
 
-  /* ====== TÍTULOS ====== */
-  h2 {
-    font-size: 2.6em;
-    color: #1e90ff;
-    margin-bottom: 10px;
-  }
+/* ===============================
+   TÍTULOS
+================================ */
+.reveal h1,
+.reveal h2 {
+  color: #3fa9f5; /* azul principal */
+  font-weight: 700;
+  margin-bottom: 18px;
+}
 
-  h3 {
-    font-size: 1.9em;
-    color: #ff3b3b;
-    margin-bottom: 20px;
-  }
+.reveal h1 {
+  font-size: 2.6em;
+}
 
-  /* ====== TEXTO ====== */
-  p {
-    font-size: 1.1em;
-    line-height: 1.5em;
-    color: #e6e6e6;
-  }
+.reveal h2 {
+  font-size: 2.2em;
+}
 
-  strong {
-    color: #ff3b3b;
-    font-weight: 700;
-  }
+.reveal h3 {
+  font-size: 1.6em;
+  color: #a8d4ff; /* azul mais suave */
+  font-weight: 600;
+  margin-bottom: 16px;
+}
 
-  em {
-    color: #1e90ff;
-    font-style: normal;
-    font-weight: 600;
-  }
+/* ===============================
+   TEXTO
+================================ */
+.reveal p {
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
 
-  /* ====== LISTAS ====== */
-  ul {
-    margin-top: 20px;
-  }
+.reveal strong {
+  color: #ffffff;
+  font-weight: 700;
+}
 
-  li {
-    margin-bottom: 14px;
-    font-size: 1.05em;
-    position: relative;
-    padding-left: 20px;
-  }
+.reveal em {
+  color: #cfe9ff;
+  font-style: normal;
+  font-weight: 600;
+}
 
-  li::before {
-    content: "▸";
-    position: absolute;
-    left: 0;
-    color: #1e90ff;
-    font-weight: bold;
-  }
+/* ===============================
+   LISTAS
+================================ */
+.reveal ul {
+  margin-top: 16px;
+}
 
-  /* ====== TEXTO PEQUENO ====== */
-  .small {
-    font-size: 0.75em;
-    color: #b3b3b3;
-    margin-top: 15px;
-  }
+.reveal li {
+  font-size: 1.05em;
+  margin-bottom: 12px;
+  padding-left: 22px;
+  position: relative;
+  color: #ffffff;
+}
 
-  /* ====== DESTAQUE TIPO CARD ====== */
-  section p + p {
-    margin-top: 16px;
-  }
+.reveal li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #3fa9f5;
+  font-size: 1.4em;
+  line-height: 1;
+}
 
-  /* ====== TRANSIÇÕES ====== */
-  .reveal .slides section {
-    transition: transform 0.6s ease, opacity 0.6s ease;
-  }
+/* ===============================
+   TEXTO PEQUENO / OBS
+================================ */
+.reveal .small {
+  font-size: 0.75em;
+  color: #d0d0d0;
+  margin-top: 18px;
+}
 
-  /* ====== LINK / REFERÊNCIA ====== */
-  a {
-    color: #1e90ff;
-    text-decoration: none;
-    font-weight: 600;
-  }
+/* ===============================
+   LINKS
+================================ */
+.reveal a {
+  color: #3fa9f5;
+  text-decoration: none;
+  font-weight: 600;
+}
 
-  a:hover {
-    color: #ff3b3b;
-  }
+.reveal a:hover {
+  text-decoration: underline;
+}
 
-  /* ====== BARRA DE PROGRESSO ====== */
-  .reveal .progress {
-    background: #333;
-  }
+/* ===============================
+   TRANSIÇÕES
+================================ */
+.reveal .slides section {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
-  .reveal .progress span {
-    background: linear-gradient(90deg, #ff3b3b, #1e90ff);
-  }
+/* ===============================
+   BARRA DE PROGRESSO
+================================ */
+.reveal .progress {
+  background: #444;
+}
+
+.reveal .progress span {
+  background: #3fa9f5;
+}
