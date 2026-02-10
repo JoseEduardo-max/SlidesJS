@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Módulo 02 – Aula 3 | Aplicações práticas de RAG</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="reveal">
+  <div class="slides">
+
+    <!-- SLIDE 1 -->
+    <section>
+      <h2>Módulo 02 – Aula 3</h2>
+      <h3>Aplicações práticas de RAG e Avaliação</h3>
+      <p>
+        Como transformar RAG em um sistema real,  
+        avaliar qualidade e evitar erros em produção.
+      </p>
+    </section>
+
+    <!-- SLIDE 2 -->
+    <section>
+      <h3>O que muda quando vamos para a prática?</h3>
+      <p>
+        Entender RAG é diferente de colocar RAG em produção.
+      </p>
+      <ul>
+        <li>Dados reais são bagunçados</li>
+        <li>Respostas precisam ser confiáveis</li>
+        <li>Custo e latência importam</li>
+      </ul>
+    </section>
+
+    <!-- SLIDE 3 -->
+    <section>
+      <h3>RAG não é só perguntar e responder</h3>
+      <p>
+        Um sistema RAG completo envolve:
+      </p>
+      <ul>
+        <li>Ingestão de dados</li>
+        <li>Processamento e divisão</li>
+        <li>Busca semântica</li>
+        <li>Geração controlada</li>
+      </ul>
+    </section>
+
+    <!-- SLIDE 4 -->
+    <section>
+      <h3>Pipeline prática de um RAG</h3>
+      <ol>
+        <li>Coletar documentos</li>
+        <li>Dividir em chunks</li>
+        <li>Gerar embeddings</li>
+        <li>Armazenar vetores</li>
+        <li>Consultar e responder</li>
+      </ol>
+    </section>
+
+    <!-- SLIDE 5 -->
+    <section>
+      <h3>Ingestão de dados</h3>
+      <p>
+        Sistemas RAG trabalham com dados reais:
+      </p>
+      <ul>
+        <li>PDFs</li>
+        <li>Sites</li>
+        <li>Planilhas</li>
+        <li>Bases internas</li>
+      </ul>
+    </section>
+
+    <!-- SLIDE 6 -->
+    <section>
+      <h3>Por que dividir os documentos?</h3>
+      <p>
+        Textos grandes demais:
+      </p>
+      <ul>
+        <li>Dificultam a busca</li>
+        <li>Geram respostas genéricas</li>
+        <li>Aumentam custo</li>
+      </ul>
+    </section>
+
+    <!-- SLIDE 7 -->
+    <section>
+      <h3>Chunking (divisão do texto)</h3>
+      <p>
+        Chunking é dividir documentos  
+        em partes menores e significativas.
+      </p>
+      <p>
+        Cada chunk vira uma unidade de busca.
+      </p>
+    </section>
+
+    <!-- SLIDE 8 -->
+    <section>
+      <h3>Indexação vetorial</h3>
+      <p>
+        Cada chunk é transformado em um embedding.
+      </p>
+      <p>
+        Esses vetores são armazenados  
+        em um banco vetorial.
+      </p>
+    </section>
+
+    <!-- SLIDE 9 -->
+    <section>
+      <h3>Consulta semântica</h3>
+      <p>
+        A pergunta do usuário  
+        também vira um embedding.
+      </p>
+      <p>
+        O sistema recupera  
+        os chunks mais relevantes.
+      </p>
+    </section>
+
+    <!-- SLIDE 10 -->
+    <section>
+      <h3>Geração da resposta</h3>
+      <p>
+        A IA recebe:
+      </p>
+      <ul>
+        <li>Pergunta do usuário</li>
+        <li>Contexto recuperado</li>
+      </ul>
+      <p>
+        E gera uma resposta contextual.
+      </p>
+    </section>
+
+    <!-- SLIDE 11 -->
+    <section>
+      <h3>Exemplo prático</h3>
+      <p>
+        Pergunta:
+        <em>"Quais são os benefícios da empresa?"</em>
+      </p>
+      <p>
+        O sistema busca no manual interno  
+        antes de responder.
+      </p>
+    </section>
+
+    <!-- SLIDE 12 -->
+    <section>
+      <h3>Atividade 1</h3>
+      <p>
+        Simular um pipeline RAG completo.
+      </p>
+      <p>
+        Cada grupo define:
+      </p>
+      <ul>
+        <li>Fonte de dados</li>
+        <li>Chunks</li>
+        <li>Pergunta</li>
+        <li>Resposta esperada</li>
+      </ul>
+    </section>
+
+    <!-- SLIDE 13 -->
+    <section>
+      <h3>Por que avaliar um RAG?</h3>
+      <p>
+        Um RAG pode parecer correto  
+        e ainda assim estar errado.
+      </p>
+      <p>
+        Avaliar evita decisões ruins.
+      </p>
+    </section>
+
+    <!-- SLIDE 14 -->
+    <section>
+      <h3>Métricas de avaliação</h3>
+      <ul>
+        <li>Recall</li>
+        <li>Precisão</li>
+        <li>Latência</li>
+        <li>Custo</li>
+      </ul>
+    </section>
+
+    <!-- SLIDE 15 -->
+    <section>
+      <h3>Recall</h3>
+      <p>
+        Mede se o sistema  
+        encontrou a informação correta.
+      </p>
+    </section>
+
+    <!-- SLIDE 16 -->
+    <section>
+      <h3>Precisão</h3>
+      <p>
+        Mede se os resultados recuperados  
+        realmente são relevantes.
+      </p>
+    </section>
+
+    <!-- SLIDE 17 -->
+    <section>
+      <h3>Latência e custo</h3>
+      <p>
+        Um bom RAG precisa:
+      </p>
+      <ul>
+        <li>Responder rápido</li>
+        <li>Custar pouco</li>
+        <li>Escalar bem</li>
+      </ul>
+    </section>
+
+    <!-- SLIDE 18 -->
+    <section>
+      <h3>Atividade 2</h3>
+      <p>
+        Avaliação manual de um chatbot RAG.
+      </p>
+      <p>
+        Julgue:
+      </p>
+      <ul>
+        <li>Contexto recuperado</li>
+        <li>Qualidade da resposta</li>
+        <li>Possíveis falhas</li>
+      </ul>
+    </section>
+
+    <!-- SLIDE 19 -->
+    <section>
+      <h3>Ferramentas para RAG</h3>
+      <ul>
+        <li>LangChain</li>
+        <li>LlamaIndex</li>
+        <li>Streamlit</li>
+        <li>FastAPI</li>
+      </ul>
+    </section>
+
+    <!-- SLIDE 20 -->
+    <section>
+      <h3>Encerramento</h3>
+      <p>
+        RAG transforma modelos de linguagem  
+        em sistemas confiáveis.
+      </p>
+      <p>
+        Sem avaliação, não existe RAG seguro.
+      </p>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script>
+  Reveal.initialize();
+</script>
+
+</body>
+</html>
